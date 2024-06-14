@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Constructora Vanguardia</title>
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.com/libraries/bootstrap-datepicker"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment-with-locales.min.js" integrity="sha512-4F1cxYdMiAW98oomSLaygEwmCnIP38pb4Kx70yQYqRwLVCs3DbRumfBq82T08g/4LJ/smbFGFpmeFlQgoDccgg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="icon" href="/assets/images/builder-removebg-preview.ico">
+    <link rel="stylesheet" href="/assets/css/home.css">
+    <script src="/assets/js/home.js"></script>
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+
+        .b-example-divider {
+            width: 100%;
+            height: 3rem;
+            background-color: rgba(0, 0, 0, .1);
+            border: solid rgba(0, 0, 0, .15);
+            border-width: 1px 0;
+            box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+        }
+
+        .b-example-vr {
+            flex-shrink: 0;
+            width: 1.5rem;
+            height: 100vh;
+        }
+
+        .bi {
+            vertical-align: -.125em;
+            fill: currentColor;
+        }
+
+        .nav-scroller {
+            position: relative;
+            z-index: 2;
+            height: 2.75rem;
+            overflow-y: hidden;
+        }
+
+        .nav-scroller .nav {
+            display: flex;
+            flex-wrap: nowrap;
+            padding-bottom: 1rem;
+            margin-top: -1px;
+            overflow-x: auto;
+            text-align: center;
+            white-space: nowrap;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .btn-bd-primary {
+            --bd-violet-bg: #712cf9;
+            --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+
+            --bs-btn-font-weight: 600;
+            --bs-btn-color: var(--bs-white);
+            --bs-btn-bg: var(--bd-violet-bg);
+            --bs-btn-border-color: var(--bd-violet-bg);
+            --bs-btn-hover-color: var(--bs-white);
+            --bs-btn-hover-bg: #6528e0;
+            --bs-btn-hover-border-color: #6528e0;
+            --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+            --bs-btn-active-color: var(--bs-btn-hover-color);
+            --bs-btn-active-bg: #5a23c8;
+            --bs-btn-active-border-color: #5a23c8;
+        }
+
+        .bd-mode-toggle {
+            z-index: 1500;
+        }
+
+        .bd-mode-toggle .dropdown-menu .active .bi {
+            display: block !important;
+        }
+    </style>
+</head>
+<body class="d-flex h-100 text-center text-dark flex-column">
+<svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+    <symbol id="check2" viewBox="0 0 16 16">
+        <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+    </symbol>
+    <symbol id="circle-half" viewBox="0 0 16 16">
+        <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
+    </symbol>
+    <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+        <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
+        <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/>
+    </symbol>
+    <symbol id="sun-fill" viewBox="0 0 16 16">
+        <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+    </symbol>
+</svg>
+
+<div class="cover-container d-flex w-100 p-3 mx-auto flex-column">
+    <header class="mb-auto w-75 mx-auto">
+        <div>
+            <h3 class="float-md-start mb-0 title">Constructora Vanguardia</h3>
+            <nav class="nav nav-masthead justify-content-center float-md-end">
+                <a class="nav-link fw-bold py-1 px-0 active" aria-current="page" href="#">Inicio</a>
+                <!--<a class="nav-link fw-bold py-1 px-0" href="#">Features</a>
+                <a class="nav-link fw-bold py-1 px-0" href="#">Contact</a>-->
+            </nav>
+        </div>
+    </header>
+
+    <div class="px-3 my-auto">
+        <h1 class="title animate__animated animate__zoomInUp">Constructora Vanguardia</h1>
+        <p class="lead mb-4">En <strong>Constructora Vanguardia</strong>, transformamos tus sueños en realidad</p>
+        <p class="lead">
+            <a href="#registerForm" class="btn btn-lg btn-dark fw-bold px-5 py-3 animate__animated animate__rubberBand animate__delay-2s" id="registerBtn">NUEVO USUARIO!</a>
+        </p>
+    </div>
+
+    <!--<footer class="mt-auto text-white-50">
+        <p>Cover template for <a href="https://getbootstrap.com/" class="text-white">Bootstrap</a>, by <a href="https://twitter.com/mdo" class="text-white">@mdo</a>.</p>
+    </footer>-->
+</div>
+
+<main>
+    <section class="container w-100 mt-5">
+        <div class="d-flex flex-column align-items-start justify-content-start h-100 w-100 py-5 flex-wrap">
+            <h1 class="mb-4 ">Acerca de la plataforma</h1>
+            <p class="fs-5 lh-2 text-start ">Bienvenido al portal interno de gestión de personal de <strong>Constructora Vanguardia</strong>. Este sitio web ha sido creado específicamente para optimizar y facilitar la administración de nuestros valiosos recursos humanos mediante un sistema de listado de usuarios.</p>
+
+            <h2>Objetivos Principales</h2>
+            <ul class="text-white">
+                <li>
+                    <p class="fs-6 lh-2 text-start">
+                        <strong>Centralización de Información:</strong>
+                        Proveer un punto de acceso único donde se pueda consultar de manera rápida y eficiente la información de todos los usuarios.
+                    </p>
+                </li>
+                <li>
+                    <p class="fs-6 lh-2 text-start">
+                        <strong>Gestión Eficiente del Personal:</strong>
+                        Facilitar la visualización y gestión de los perfiles de usuarios a través de un sistema de listado en cuadrícula, permitiendo una organización clara y ordenada.
+                    </p>
+                </li>
+            </ul>
+            <h2>Características del Listado de Usuarios</h2>
+            <ul class="text-white">
+                <li>
+                    <p class="fs-6 lh-2 text-start">
+                        <strong>Diseño en Cuadrícula:</strong>
+                        Los usuarios se mostrarán en una cuadrícula de 4 columnas por fila, optimizada para máxima resolución. Este formato permite una visualización clara y accesible de la información del personal.
+                    </p>
+                </li>
+                <li>
+                    <p class="fs-6 lh-2 text-start">
+                        <strong>Acceso Rápido a Perfiles:</strong>
+                        Cada celda de la cuadrícula representa a un usuario, con acceso rápido a detalles importantes como nombre, apellido, puesto, fecha de nacimiento y correo electrónico.
+                    </p>
+                </li>
+                <li>
+                    <p class="fs-6 lh-2 text-start">
+                        <strong>Interfaz Intuitiva:</strong>
+                        La interfaz ha sido diseñada pensando en la usabilidad, asegurando que los administradores y el equipo de recursos humanos puedan navegar y gestionar la información con facilidad.
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="container w-100 p-5 mt-5">
+        <div class="d-flex flex-row align-items-center justify-content-center h-100 w-100">
+            <div class="form-wrapper w-md-75 d-flex flex-row flex-wrap p-md-5 p-3">
+                <h2 class="text-center w-100">Nuevo usuario</h2>
+                <form id="registerForm" action="" method="post" class="needs-validation d-flex flex-row flex-wrap p-md-x-4 p-2 w-100">
+
+                    <div class="mb-md-3 col-12 col-md-6 col-lg-6 p-3">
+                        <label for="name" class="form-label text-start w-100">Nombre</label><br>
+                        <input type="text" class="form-control" id="name">
+                        <div class="valid-feedback">Nombre válido!</div>
+                        <div class="invalid-feedback">El nombre debe tener mínimo 4 caracteres</div>
+                    </div>
+                    <div class="mb-md-3 col-12 col-md-6 col-lg-6 p-3">
+                        <label for="name" class="form-label text-start w-100">Apellido</label><br>
+                        <input type="text" class="form-control" id="lastname">
+                        <div class="valid-feedback">Apellido válido!</div>
+                        <div class="invalid-feedback">El apellido debe tener mínimo 3 caracteres</div>
+                    </div>
+                    <div class="mb-md-3 col-12 col-md-6 col-lg-6 p-3">
+                        <label for="name" class="form-label text-start w-100">Fecha de nacimiento</label><br>
+                        <input type="date" class="form-control" id="birthdate">
+                        <div class="valid-feedback">Fecha válida!</div>
+                        <div class="invalid-feedback">La fecha de nacimiento debe ser definida</div>
+                    </div>
+                    <div class="mb-md-3 col-12 col-md-6 col-lg-6 p-3">
+                        <label for="email" class="form-label text-start w-100">Email</label>
+                        <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+                        <div class="valid-feedback">Email válido!</div>
+                        <div class="invalid-feedback">El email debe ser válido y único</div>
+                    </div>
+                    <div class="mb-md-3 col-12 col-md-6 col-lg-6 p-3">
+                        <label for="name" class="form-label text-start w-100">Fecha de ingreso</label><br>
+                        <input type="date" class="form-control" id="logindate">
+                        <div class="valid-feedback">Fecha válida!</div>
+                        <div class="invalid-feedback">La fecha de ingreso debe ser definida y 18 años superior a la fecha de nacimiento</div>
+                    </div>
+                    <div class="mb-md-3 col-12 col-md-6 col-lg-6 p-3">
+                        <label for="job" class="form-label form-label text-start w-100">Cargo</label><br>
+                        <select name="type" class="form-control" id="job">
+                            <option value="">--Selecciona un cargo--</option>
+                            <option value="gerente">Gerente</option>
+                            <option value="ingeniero">Ingeniero</option>
+                            <option value="arquitecto">Arquitecto</option>
+                            <option value="maestro">Maestro</option>
+                            <option value="jornal">Jornal</option>
+                        </select>
+                        <div class="valid-feedback">Cargo valido!</div>
+                        <div class="invalid-feedback">Seleccione un cargo</div>
+                    </div>
+                    <div class="mb-md-3 d-flex justify-content-end align-items-end px-3 flex-row w-100">
+                        <button type="submit" class="btn btn-primary col-12 col-md-4 col-lg-2" id="submit">Enviar</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="container w-100 p-5 mt-5">
+        <h2 class="text-center w-100">Lista de usuarios</h2>
+        <div class="row mt-5" id="userList">
+
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                    <button type="button" class="btn-close close-modal" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <span id="modalText"></span>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary close-modal" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary close-modal" data-bs-dismiss="modal">Aceptar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<footer class="container py-5">
+    <div class="row justify-content-center align-items-center">
+        <div class="col-12 col-md">
+            <div class="d-flex justify-content-center align-items-center">
+                <img src="/assets/images/builder-removebg-preview.ico" width="25px" alt="">
+                <small class="ms-3 text-white">&copy;  2024</small>
+            </div>
+        </div>
+        <div class="col-10 mx-auto">
+            <header>
+                <h3>Constructora Vanguardia</h3>
+            </header>
+            <p class="fs-6 lh-2 text-start">En <strong>Constructora Vanguardia</strong>, comprendemos que una gestión eficiente del personal es clave para el éxito y la productividad de nuestra empresa. Este portal interno es una herramienta vital en nuestro compromiso de proporcionar un entorno de trabajo organizado y bien gestionado, beneficiando tanto a los empleados como a los administradores.</p>
+
+            <p class="fs-6 lh-2 text-start">¡Gracias por utilizar nuestra plataforma de gestión de personal! Con <strong>Constructora Vanguardia</strong>, seguimos construyendo un futuro sólido y bien estructurado.</p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
